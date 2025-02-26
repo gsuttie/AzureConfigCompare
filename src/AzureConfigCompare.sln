@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureConfigCompare.Tests", "AzureConfigCompare.Tests\AzureConfigCompare.Tests.csproj", "{FBB7B993-6791-4EE3-9580-6D4E64FCD4E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureConfigCompare", "AzureConfigCompare\AzureConfigCompare.csproj", "{12D9EEE8-B7D2-45AA-BB4C-33C92EC7990E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{FBB7B993-6791-4EE3-9580-6D4E64FCD4E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBB7B993-6791-4EE3-9580-6D4E64FCD4E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBB7B993-6791-4EE3-9580-6D4E64FCD4E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12D9EEE8-B7D2-45AA-BB4C-33C92EC7990E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12D9EEE8-B7D2-45AA-BB4C-33C92EC7990E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12D9EEE8-B7D2-45AA-BB4C-33C92EC7990E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12D9EEE8-B7D2-45AA-BB4C-33C92EC7990E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
