@@ -53,3 +53,16 @@ dotnet test
 ```
 
 This will execute all the unit tests in the `AzureConfigCompare.Tests` project and display the test results.
+
+## GitHub Actions
+
+The project includes a GitHub Action to build and test the project automatically. The GitHub Action is defined in the `.github/workflows/dotnet.yml` file. It is triggered on every push and pull request to the `main` branch.
+
+The GitHub Action performs the following steps:
+1. Checks out the repository
+2. Sets up .NET 5.0
+3. Restores dependencies
+4. Builds the project
+5. Runs the unit tests
+
+To view the status of the GitHub Action, navigate to the "Actions" tab in the GitHub repository.
