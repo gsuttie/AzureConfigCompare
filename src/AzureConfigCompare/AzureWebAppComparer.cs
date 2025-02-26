@@ -69,11 +69,6 @@ namespace AzureConfigCompare
                 differences.Add($"Node Version: {webApp1.NodeVersion} != {webApp2.NodeVersion}");
             }
 
-            if (webApp1.PowerShellVersion != webApp2.PowerShellVersion)
-            {
-                differences.Add($"PowerShell Version: {webApp1.PowerShellVersion} != {webApp2.PowerShellVersion}");
-            }
-
             if (webApp1.ScmType != webApp2.ScmType)
             {
                 differences.Add($"SCM Type: {webApp1.ScmType} != {webApp2.ScmType}");
