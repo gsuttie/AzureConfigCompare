@@ -8,8 +8,42 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="SampleResponses\web-appsettings-dev.json" />
+    <None Remove="SampleResponses\web-appsettings-prod.json" />
+    <None Remove="SampleResponses\web-config-dev.json" />
+    <None Remove="SampleResponses\web-config-prod.json" />
+    <None Remove="SampleResponses\web-connectionstrings-dev.json" />
+    <None Remove="SampleResponses\web-connectionstrings-prod.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="SampleResponses\web-appsettings-dev.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleResponses\web-appsettings-prod.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleResponses\web-config-dev.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleResponses\web-config-prod.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleResponses\web-connectionstrings-dev.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleResponses\web-connectionstrings-prod.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
     <PackageReference Include="MSTest" Version="3.6.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AzureConfigCompare\AzureConfigCompare.csproj" />
   </ItemGroup>
 
   <ItemGroup>
