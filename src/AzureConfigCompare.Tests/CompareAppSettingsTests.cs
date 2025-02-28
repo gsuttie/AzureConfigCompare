@@ -9,8 +9,8 @@
         {
             //Arrange
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            string filePath1 = Path.Combine(baseDirectory, @"SampleResponses\web-appsettings-dev.json");
-            string filePath2 = Path.Combine(baseDirectory, @"SampleResponses\web-appsettings-prod.json");
+            string filePath1 = Path.Combine(baseDirectory, @"SampleResponses/web-appsettings-dev.json");
+            string filePath2 = Path.Combine(baseDirectory, @"SampleResponses/web-appsettings-prod.json");
 
             //Act
             CompareFiles compareFiles = new(filePath1, filePath2); ;
