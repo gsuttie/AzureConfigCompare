@@ -1,0 +1,15 @@
+{
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SampleResourceGroupProd/providers/Microsoft.Web/sites/sample-webapp-prod/config/appsettings",
+  "name": "appsettings",
+  "type": "Microsoft.Web/sites/config",
+  "location": "East US",
+  "properties": {
+    "ANCM_ADDITIONAL_ERROR_PAGE_LINK": "https://sample-webapp-prod.scm.azurewebsites.net/detectors?type=tools&name=eventviewer",
+    "APPINSIGHTS_INSTRUMENTATIONKEY": "00000000-0000-0000-0000-000000000000",
+    "APPLICATIONINSIGHTS_CONNECTION_STRING": "InstrumentationKey=00000000-0000-0000-0000-000000000000;IngestionEndpoint=https://eastus-1.in.applicationinsights.azure.com/",
+    "ApplicationInsightsAgent_EXTENSION_VERSION": "~2",
+    "CacheConnection": "sampleCache-prod.redis.cache.windows.net:6380,password=password123,ssl=True,abortConnect=False",
+    "MSDEPLOY_RENAME_LOCKED_FILES": "1",
+    "XDT_MicrosoftApplicationInsights_Mode": "default"
+  }
+}
