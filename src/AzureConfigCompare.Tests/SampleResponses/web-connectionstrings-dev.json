@@ -1,0 +1,13 @@
+{
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SampleResourceGroupDev/providers/Microsoft.Web/sites/SampleResourceGroupDev/config/connectionstrings",
+  "name": "connectionstrings",
+  "type": "Microsoft.Web/sites/config",
+  "location": "East US",
+  "tags": {},
+  "properties": {
+    "DefaultConnectionString": {
+      "value": "Server=tcp:sampledbserver-dev.database.windows.net,1433;Initial Catalog=SampleDB;Persist Security Info=False;User ID=db_admin;Password=password123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+      "type": "SQLServer"
+    }
+  }
+}
