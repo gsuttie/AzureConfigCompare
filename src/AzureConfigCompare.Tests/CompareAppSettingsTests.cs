@@ -17,9 +17,9 @@
 
             //Assert
             Assert.IsNotNull(compareFiles);
-            Assert.IsTrue(compareFiles.Differences.Count >= 0);
-            Assert.AreEqual(2,compareFiles.Differences[0].LineNumber);
-            Assert.AreEqual(@"Value mismatch at /id: /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SampleResourceGroupDev/providers/Microsoft.Web/sites/sample-webapp-dev/config/appsettings vs /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SampleResourceGroupProd/providers/Microsoft.Web/sites/sample-webapp-prod/config/appsettings", compareFiles.Differences[0].Message);
+            Assert.IsTrue(compareFiles.TextDifferences.Count >= 0);
+            Assert.AreEqual(2,compareFiles.TextDifferences[0].LineNumber);
+            Assert.AreEqual(@"Value mismatch at /id: /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SampleResourceGroupDev/providers/Microsoft.Web/sites/sample-webapp-dev/config/appsettings vs /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SampleResourceGroupProd/providers/Microsoft.Web/sites/sample-webapp-prod/config/appsettings", compareFiles.TextDifferences[0].Message);
 
         }
     }
