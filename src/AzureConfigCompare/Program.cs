@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using AzureConfigCompare.Models;
+using System.Drawing;
 using Console = Colorful.Console;
 
 namespace AzureConfigCompare
@@ -7,17 +8,19 @@ namespace AzureConfigCompare
     {
         static void Main()
         {
-            string originalText = "This is the original text.";
-            string modifiedText = "This is the modified text.";
-
-            HighlightDifferences(originalText, modifiedText);
+            string originalText = @"SampleFiles/File1.json";
+            string modifiedText = @"SampleFiles/File2.json";
+            CompareFiles compareFiles = new(originalText, modifiedText);
+            HighlightDifferences(compareFiles.TextDifferences, compareFiles.CharacterDifferences);
         }
 
-        static void HighlightDifferences(string original, string modified)
+        private static void HighlightDifferences(List<TextDifference> textDifferences, List<CharacterDifference> characterDifferences)
         {
-            List<TextDifference> differences = GetDifferences(original, modified);
-
-            foreach (TextDifference diff in differences)
+            foreach (TextDifference difference in textDifferences)
+            {
+                Console.WriteLine($"Line {difference.LineNumber}: {difference.Message}");
+            }
+            foreach (CharacterDifference diff in characterDifferences)
             {
                 if (diff.IsDifferent)
                 {
@@ -32,34 +35,7 @@ namespace AzureConfigCompare
             Console.WriteLine();
         }
 
-        static List<TextDifference> GetDifferences(string original, string modified)
-        {
-            List<TextDifference> differences = new List<TextDifference>();
 
-            int minLength = Math.Min(original.Length, modified.Length);
-            for (int i = 0; i < minLength; i++)
-            {
-                if (original[i] != modified[i])
-                {
-                    differences.Add(new TextDifference { Text = modified[i].ToString(), IsDifferent = true });
-                }
-                else
-                {
-                    differences.Add(new TextDifference { Text = modified[i].ToString(), IsDifferent = false });
-                }
-            }
-
-            if (original.Length > minLength)
-            {
-                differences.Add(new TextDifference { Text = original.Substring(minLength), IsDifferent = true });
-            }
-            else if (modified.Length > minLength)
-            {
-                differences.Add(new TextDifference { Text = modified.Substring(minLength), IsDifferent = true });
-            }
-
-            return differences;
-        }
 
         //static async Task Main(string[] args)
         //{
@@ -95,11 +71,6 @@ namespace AzureConfigCompare
         //}
     }
 
-    class TextDifference
-    {
-        public string Text { get; set; }
-        public bool IsDifferent { get; set; }
-    }
 }
 
 
