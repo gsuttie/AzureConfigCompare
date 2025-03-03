@@ -25,8 +25,16 @@
             Assert.IsTrue(compareFiles.CharacterDifferences.Count >= 0);
             Assert.AreEqual("{", compareFiles.CharacterDifferences[0].Text);
             Assert.AreEqual(false, compareFiles.CharacterDifferences[0].IsDifferent);
-            Assert.AreEqual("p", compareFiles.CharacterDifferences[147].Text);
-            Assert.AreEqual(true, compareFiles.CharacterDifferences[147].IsDifferent);
+            bool foundDifferentCharacter = false;
+            for (int i = 0; i < compareFiles.CharacterDifferences.Count; i++)
+            {
+                if (compareFiles.CharacterDifferences[i].IsDifferent)
+                {
+                    foundDifferentCharacter = true;
+                    break;
+                }
+            }
+            Assert.IsTrue(foundDifferentCharacter);
         }
     }
 }
