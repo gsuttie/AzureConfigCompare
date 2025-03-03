@@ -23,8 +23,10 @@
             Assert.AreEqual(@"Value mismatch at /id: /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SampleResourceGroupDev/providers/Microsoft.Web/sites/sample-webapp-dev/config/appsettings vs /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SampleResourceGroupProd/providers/Microsoft.Web/sites/sample-webapp-prod/config/appsettings", compareFiles.TextDifferences[0].Message);
             Assert.IsNotNull(compareFiles.CharacterDifferences);
             Assert.IsTrue(compareFiles.CharacterDifferences.Count >= 0);
-            Assert.AreEqual("/", compareFiles.CharacterDifferences[0].Text);
+            Assert.AreEqual("{", compareFiles.CharacterDifferences[0].Text);
             Assert.AreEqual(false, compareFiles.CharacterDifferences[0].IsDifferent);
+            Assert.AreEqual("p", compareFiles.CharacterDifferences[147].Text);
+            Assert.AreEqual(true, compareFiles.CharacterDifferences[147].IsDifferent);
         }
     }
 }
